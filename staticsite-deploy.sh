@@ -14,7 +14,7 @@ if [ -f "/temp/src/package.json" ]; then
 
 	# Copying compiled static site to Nginx html folder
 	echo "docker-static-roots-nginx-recompile: Copying compiled static site to Nginx html folder..."
-	/bin/cp -rf public/ /usr/share/nginx/html/;
+	/bin/cp -af /temp/src/public/. /usr/share/nginx/html;
 fi
 
 # Starting Nginx
